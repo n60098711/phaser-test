@@ -1,15 +1,40 @@
-# Phaser's Revenge
+# Phaser Slot Demo
 
-Phaser's Revenge is an adaptation of the classic game Space Invaders.
+Невеликий демо-проєкт на **Phaser 3 + Vite** із механікою слот-машини.
 
-Your mission is to shoot the enemy ship and dodge its attacks to score as many points as possible in a short amount of time.
+У грі є:
+- сітка символів `5x3`;
+- анімація спіну з blur-ефектом барабанів;
+- поетапна зупинка колонок;
+- відображення виграшу (`WIN`) та анімація символів після виграшу;
+- стартовий екран і головна сцена гри.
 
-## Instructions
+## Технології
 
-1. Clone the repository.
-2. Install dependencies with `npm install`.
-3. Start the development server with `npm run dev`.
-4. If you want to build the project, run `npm run build`.
+- `phaser` (рендеринг та сцени);
+- `@esotericsoftware/spine-phaser` (плагін Spine);
+- `vite` (dev-сервер і збірка).
 
+## Запуск локально
 
-![screenshot](screenshot.png)
+1. Встановити залежності:
+   ```bash
+   npm install
+   ```
+2. Запустити dev-режим:
+   ```bash
+   npm run dev
+   ```
+3. Відкрити адресу, яку покаже Vite у терміналі.
+
+## Продакшн-збірка
+
+```bash
+npm run build
+```
+
+## Попередній перегляд збірки
+
+```bash
+npm run preview
+```
