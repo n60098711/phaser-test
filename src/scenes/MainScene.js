@@ -26,12 +26,17 @@ const CELL_W = 196 * GRID_SCALE;
 const CELL_H = 208 * GRID_SCALE;
 const SYMBOL_SCALE = 1.4;
 
-const DROP_DURATION = 520;
-const BLUR_START_DELAY = 270;
-const REEL_SPEED = 34;
+const BLUR_START_DELAY = 10;
+const REEL_SPEED = 40;
 const TICK_MS = 16;
-const BASE_BLUR_MS = 1200;
-const COL_STOP_OFFSET = 220;
+const BASE_BLUR_MS = 2200;
+const COL_STOP_OFFSET = 320;
+const STATIC_TO_BLUR_CROSSFADE_MS = 160;
+const PRE_SPIN_LIFT_PX = 100;
+const PRE_SPIN_LIFT_MS = 220;
+const FINAL_LAND_BOUNCE_MS = 120;
+const FINAL_LAND_SCALE_BUMP = 1.04;
+const FINAL_LAND_COMPLETE_DELAY_MS = FINAL_LAND_BOUNCE_MS * 2 + 20;
 
 const DEPTH_BG = 0;
 const DEPTH_GRID = 1;
@@ -122,43 +127,80 @@ export class MainScene extends Scene {
         const result = getRandomSpin();
         this.winText.setText("WIN: 0");
 
-        for (let row = 0; row < ROWS; row++) {
-            for (let col = 0; col < COLS; col++) {
-                const oldSp = this.symbolsGrid[row][col];
-                if (!oldSp) continue;
-                this.tweens.add({
-                    targets: oldSp,
-                    y: this.gridBottom + CELL_H,
-                    duration: DROP_DURATION,
-                    ease: "Sine.easeInOut",
-                    onComplete: () => oldSp.destroy()
-                });
+        const oldGrid = this.symbolsGrid;
+        const staticReels = [];
+
+        for (let col = 0; col < COLS; col++) {
+            const reel = [];
+            for (let row = 0; row < ROWS; row++) {
+                const oldSp = oldGrid[row][col];
+                if (oldSp) reel.push(oldSp);
             }
+            const lowerFrame = STATIC_FRAMES[Math.floor(Math.random() * STATIC_FRAMES.length)];
+            const lowerSp = this.spawnSymbol(ROWS, col, lowerFrame);
+            reel.push(lowerSp);
+            staticReels.push(reel);
         }
 
-        this.symbolsGrid = Array.from({ length: ROWS }, () => Array(COLS).fill(null));
-        this.time.delayedCall(BLUR_START_DELAY, () => {
-            this.startBlurReels(result);
+        const staticSymbols = staticReels.flat();
+        this.tweens.add({
+            targets: staticSymbols,
+            y: `-=${PRE_SPIN_LIFT_PX}`,
+            duration: PRE_SPIN_LIFT_MS,
+            ease: "Sine.easeOut",
+            onComplete: () => {
+                staticReels.forEach((reel) => {
+                    let ticker = null;
+                    ticker = this.time.addEvent({
+                        delay: TICK_MS,
+                        loop: true,
+                        callback: () => {
+                            this.scrollReelDrain(reel);
+                            if (reel.length === 0 && ticker) {
+                                ticker.remove();
+                            }
+                        }
+                    });
+                });
+
+                this.time.delayedCall(BLUR_START_DELAY, () => {
+                    this.startBlurReels(result, STATIC_TO_BLUR_CROSSFADE_MS, staticReels);
+                });
+            }
         });
+
+        this.symbolsGrid = Array.from({ length: ROWS }, () => Array(COLS).fill(null));
     }
 
     randomBlurFrame() {
         return BLUR_FRAMES[Math.floor(Math.random() * BLUR_FRAMES.length)];
     }
 
-    startBlurReels(result) {
-        const stackSize = ROWS + 2;
+    startBlurReels(result, fadeInDuration = 0, staticReels = null) {
+        const stackSize = ROWS + 4;
         const reels = [];
 
         for (let col = 0; col < COLS; col++) {
             const reel = [];
             const x = this.startX + col * CELL_W;
+            const staticTopY = staticReels?.[col]?.length
+                ? Math.min(...staticReels[col].map((img) => img.y))
+                : this.gridTop + CELL_H / 2;
             for (let i = 0; i < stackSize; i++) {
-                const y = this.startY + (i - 1) * CELL_H;
+                const y = staticTopY - CELL_H * (i + 1);
                 const img = this.add.image(x, y, "blurredSymbols", this.randomBlurFrame())
                     .setScale(SYMBOL_SCALE)
-                    .setDepth(DEPTH_SYMBOLS)
+                    .setDepth(DEPTH_SYMBOLS - 0.1)
                     .setMask(this.gridMask);
+                if (fadeInDuration > 0) {
+                    img.alpha = 0;
+                    this.tweens.add({
+                        targets: img,
+                        alpha: 1,
+                        duration: fadeInDuration,
+                        ease: "Sine.easeInOut"
+                    });
+                }
                 reel.push(img);
             }
             reels.push(reel);
@@ -168,25 +210,26 @@ export class MainScene extends Scene {
             this.time.addEvent({
                 delay: TICK_MS,
                 loop: true,
-                callback: () => this.scrollReel(reel)
+                callback: () => this.scrollReel(reel, () => this.randomBlurFrame())
             })
         );
 
+        let stoppedColumns = 0;
         for (let col = 0; col < COLS; col++) {
             const stopAt = BASE_BLUR_MS + col * COL_STOP_OFFSET;
             this.time.delayedCall(stopAt, () => {
                 tickers[col].remove();
-                reels[col].forEach((img) => img.destroy());
-                this.revealColumn(col, result);
-
-                if (col === COLS - 1) {
-                    this.finishSpin(result);
-                }
+                this.startColumnStopTransition(col, reels[col], result, () => {
+                    stoppedColumns += 1;
+                    if (stoppedColumns === COLS) {
+                        this.finishSpin(result);
+                    }
+                });
             });
         }
     }
 
-    scrollReel(reel) {
+    scrollReel(reel, nextFrameFactory = null) {
         for (const img of reel) {
             img.y += REEL_SPEED;
         }
@@ -199,24 +242,77 @@ export class MainScene extends Scene {
         }
         if (bottom.y - CELL_H / 2 > this.gridBottom) {
             bottom.y = top.y - CELL_H;
-            bottom.setFrame(this.randomBlurFrame());
+            if (nextFrameFactory) {
+                bottom.setFrame(nextFrameFactory());
+            }
         }
     }
 
-    revealColumn(col, result) {
+    scrollReelDrain(reel) {
+        for (const img of reel) {
+            img.y += REEL_SPEED;
+        }
+
+        for (let i = reel.length - 1; i >= 0; i--) {
+            if (reel[i].y - CELL_H / 2 > this.gridBottom) {
+                reel[i].destroy();
+                reel.splice(i, 1);
+            }
+        }
+    }
+
+    startColumnStopTransition(col, blurReel, result, onComplete) {
+        const x = this.startX + col * CELL_W;
+        const incoming = [];
+        const blurTopY = blurReel.length
+            ? Math.min(...blurReel.map((img) => img.y))
+            : this.gridTop + CELL_H / 2;
+
         for (let row = 0; row < ROWS; row++) {
             const frame = result.grid[row][col];
-            const sp = this.spawnSymbol(row, col, frame);
-            this.symbolsGrid[row][col] = sp;
+            const targetY = this.startY + row * CELL_H;
+            const spawnY = blurTopY - CELL_H * (ROWS - row);
+            const sp = this.add.image(x, spawnY, "staticSymbols", frame)
+                .setScale(SYMBOL_SCALE)
+                .setDepth(DEPTH_SYMBOLS)
+                .setMask(this.gridMask);
+            sp.targetY = targetY;
+            sp.targetRow = row;
+            incoming.push(sp);
+        }
 
-            const targetY = sp.y;
-            sp.y = targetY - CELL_H;
-            this.tweens.add({
-                targets: sp,
-                y: targetY,
-                duration: 280,
-                ease: "Sine.easeOut"
-            });
+        let stopTicker = null;
+        stopTicker = this.time.addEvent({
+            delay: TICK_MS,
+            loop: true,
+            callback: () => {
+                this.scrollReelDrain(blurReel);
+                this.scrollIncomingToTargets(incoming, col);
+
+                if (blurReel.length === 0 && incoming.length === 0) {
+                    stopTicker.remove();
+                    this.time.delayedCall(FINAL_LAND_COMPLETE_DELAY_MS, onComplete);
+                }
+            }
+        });
+    }
+
+    scrollIncomingToTargets(incoming, col) {
+        for (let i = incoming.length - 1; i >= 0; i--) {
+            const sp = incoming[i];
+            sp.y += REEL_SPEED;
+            if (sp.y >= sp.targetY) {
+                sp.y = sp.targetY;
+                this.symbolsGrid[sp.targetRow][col] = sp;
+                this.tweens.add({
+                    targets: sp,
+                    scale: SYMBOL_SCALE * FINAL_LAND_SCALE_BUMP,
+                    duration: FINAL_LAND_BOUNCE_MS,
+                    yoyo: true,
+                    ease: "Sine.easeInOut"
+                });
+                incoming.splice(i, 1);
+            }
         }
     }
 
