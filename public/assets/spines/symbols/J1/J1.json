@@ -1,0 +1,1592 @@
+{
+	"skeleton": {
+		"hash": "/W3nQwIpC8k",
+		"spine": "4.2.43",
+		"x": -205,
+		"y": -205,
+		"width": 410,
+		"height": 410,
+		"images": "./J1/",
+		"audio": "/Users/aleksander/DominatorPlay/Cleopatra/Spine"
+	},
+	"bones": [
+		{ "name": "root" },
+		{ "name": "coin", "parent": "root" },
+		{ "name": "coin_blick_fx1", "parent": "coin", "y": -2.32, "scaleX": 1.5926, "scaleY": 1.5926 },
+		{ "name": "fire_wave_fx", "parent": "root", "scaleX": 0.85, "scaleY": 0.85, "color": "e6ff00ff" },
+		{ "name": "light_back", "parent": "root", "scaleX": 0.85, "scaleY": 0.85, "color": "f3ff00ff" },
+		{ "name": "jackpot_coin_ctrl", "parent": "root", "color": "ffffffff", "icon": "arrows" },
+		{ "name": "jackpot_coin_coin_position", "parent": "jackpot_coin_ctrl", "icon": "arrows" },
+		{ "name": "jp_coin_ctrl", "parent": "jackpot_coin_coin_position" },
+		{ "name": "jp_coin_top", "parent": "jp_coin_ctrl" },
+		{
+			"name": "jackpot_coin_coin_top_text",
+			"parent": "jp_coin_top",
+			"color": "ffffffff",
+			"icon": "arrowLeftRight"
+		},
+		{ "name": "jp_coin_down", "parent": "jp_coin_ctrl" },
+		{
+			"name": "jackpot_coin_popup_jackpot_coin1",
+			"parent": "jp_coin_down",
+			"scaleX": -1,
+			"color": "ffffffff",
+			"icon": "arrowLeftRight"
+		},
+		{ "name": "jp_coin_spin_ctrl", "parent": "jp_coin_ctrl", "color": "abe323ff", "icon": "arrows" },
+		{ "name": "coin_side_center_blur", "parent": "jp_coin_ctrl" },
+		{ "name": "jackpot_coin_light_back1", "parent": "jackpot_coin_ctrl" },
+		{ "name": "jackpot_coin_popup", "parent": "jackpot_coin_ctrl" },
+		{ "name": "jackpot_coin_popup_jackpot_coin", "parent": "jackpot_coin_popup" },
+		{ "name": "jackpot_coin_particles_fx", "parent": "jackpot_coin_ctrl", "color": "ffffffff", "icon": "arrows" },
+		{ "name": "jackpot_coin_particles_fx2", "parent": "jackpot_coin_ctrl", "color": "ffffffff", "icon": "arrows" },
+		{ "name": "jackpot_coin_light_back2", "parent": "jackpot_coin_ctrl" },
+		{ "name": "jackpot_coin_coin_blick_fx", "parent": "jp_coin_top", "y": -1.74, "scaleX": 0.85, "scaleY": 0.85 },
+		{ "name": "coin3", "parent": "coin" },
+		{ "name": "coin_rotate", "parent": "root" },
+		{ "name": "coin_rotate_ctrl", "parent": "coin_rotate", "color": "ffffffff" },
+		{ "name": "coin_position", "parent": "coin_rotate_ctrl" },
+		{ "name": "rotate_coin_ctrl", "parent": "coin_position" },
+		{ "name": "coin_top", "parent": "rotate_coin_ctrl" },
+		{ "name": "coin_down", "parent": "rotate_coin_ctrl" },
+		{ "name": "coin_spin_ctrl", "parent": "rotate_coin_ctrl", "color": "abe323ff" },
+		{ "name": "coin_side_center_blur2", "parent": "rotate_coin_ctrl" },
+		{ "name": "stroke", "parent": "coin_rotate", "rotation": -179.89 },
+		{ "name": "placeholderText", "parent": "root", "y": -2 },
+		{ "name": "jackpot_coin_fire_wave_fx", "parent": "jackpot_coin_ctrl", "color": "ffffffff" },
+		{ "name": "bone", "parent": "coin" },
+		{ "name": "coin_fire/coin_shine_o_00", "parent": "bone" },
+		{ "name": "circle_fillup", "parent": "coin", "x": 0.64, "scaleX": 2, "scaleY": 2 }
+	],
+	"slots": [
+		{ "name": "coin_fire-coin_shine_o_00", "bone": "coin_fire/coin_shine_o_00", "attachment": "sym_coin_shadow" },
+		{ "name": "circle_fillup", "bone": "circle_fillup", "blend": "additive" },
+		{ "name": "coin", "bone": "coin", "attachment": "coin" },
+		{ "name": "light_back", "bone": "light_back", "color": "ffffff00", "blend": "additive" },
+		{ "name": "coin_blick_fx1", "bone": "coin_blick_fx1", "blend": "additive" },
+		{ "name": "coin3", "bone": "coin3", "attachment": "text" },
+		{ "name": "fall_top", "bone": "coin", "color": "ffffff00", "blend": "additive" },
+		{ "name": "fire_wave_fx", "bone": "fire_wave_fx" },
+		{ "name": "fire_wave_fx_add", "bone": "fire_wave_fx", "blend": "additive" },
+		{
+			"name": "jackpot_coin_light_back1",
+			"bone": "jackpot_coin_light_back1",
+			"color": "ffffff00",
+			"attachment": "light_back",
+			"blend": "screen"
+		},
+		{
+			"name": "jackpot_coin_light_back2",
+			"bone": "jackpot_coin_light_back2",
+			"color": "ffffff00",
+			"attachment": "light_back",
+			"blend": "screen"
+		},
+		{ "name": "jackpot_coin_glow_back", "bone": "jp_coin_down", "color": "ffffff00", "blend": "additive" },
+		{ "name": "jackpot_coin_fire_wave_fx", "bone": "jackpot_coin_fire_wave_fx", "blend": "additive" },
+		{ "name": "jackpot_coin_particles_fx", "bone": "jackpot_coin_particles_fx", "blend": "additive" },
+		{ "name": "jackpot_coin_particles_fx2", "bone": "jackpot_coin_particles_fx2", "blend": "additive" },
+		{ "name": "jp_coin_down", "bone": "jp_coin_down" },
+		{ "name": "jp_coin_down2", "bone": "jp_coin_down" },
+		{ "name": "jp_coin_down_back_side", "bone": "jp_coin_down" },
+		{ "name": "jp_coin_top_back_side", "bone": "jp_coin_top" },
+		{ "name": "jp_coin_side_center_blur", "bone": "coin_side_center_blur" },
+		{ "name": "jp_coin_top", "bone": "jp_coin_top" },
+		{ "name": "jp_coin_top2", "bone": "jp_coin_top" },
+		{ "name": "jackpot_coin_popup_jackpot_coin1", "bone": "jackpot_coin_popup_jackpot_coin1" },
+		{
+			"name": "jackpot_coin_popup_jackpot_coin1_add",
+			"bone": "jackpot_coin_popup_jackpot_coin1",
+			"blend": "additive"
+		},
+		{ "name": "jackpot_coin_coin_blick_fx", "bone": "jackpot_coin_coin_blick_fx", "blend": "additive" },
+		{ "name": "jackpot_coin_popup_jackpot_coin2", "bone": "jackpot_coin_coin_top_text" },
+		{
+			"name": "jackpot_coin_popup_jackpot_coin2_add",
+			"bone": "jackpot_coin_coin_top_text",
+			"color": "ffffff00",
+			"blend": "additive"
+		},
+		{ "name": "jackpot_coin_popup_jackpot_coin", "bone": "jackpot_coin_popup_jackpot_coin" },
+		{
+			"name": "jackpot_coin_glow_back2",
+			"bone": "jackpot_coin_coin_position",
+			"color": "ffffff00",
+			"blend": "additive"
+		},
+		{ "name": "coin_down", "bone": "coin_down", "color": "ffffff00" },
+		{ "name": "coin_down_back_side", "bone": "coin_down", "color": "ffffff00" },
+		{ "name": "coin_top_back_side", "bone": "coin_top", "color": "ffffff00" },
+		{
+			"name": "coin_side_center_blur",
+			"bone": "coin_side_center_blur2",
+			"color": "ffffff00",
+			"attachment": "coin_side_center_blur2"
+		},
+		{ "name": "coin_top", "bone": "coin_top", "color": "ffffff00" },
+		{ "name": "placeholderText", "bone": "placeholderText", "color": "ffffff00" }
+	],
+	"transform": [
+		{
+			"name": "down",
+			"order": 2,
+			"bones": ["coin_down"],
+			"target": "coin_spin_ctrl",
+			"mixRotate": 0,
+			"mixX": 0.15,
+			"mixShearY": 0
+		},
+		{
+			"name": "down_jp",
+			"bones": ["jp_coin_down"],
+			"target": "jp_coin_spin_ctrl",
+			"mixRotate": 0,
+			"mixX": 0.15,
+			"mixShearY": 0
+		},
+		{
+			"name": "top",
+			"order": 3,
+			"bones": ["coin_top"],
+			"target": "coin_spin_ctrl",
+			"mixRotate": 0,
+			"mixX": -0.1,
+			"mixShearY": 0
+		},
+		{
+			"name": "top_jp",
+			"order": 1,
+			"bones": ["jp_coin_top"],
+			"target": "jp_coin_spin_ctrl",
+			"mixRotate": 0,
+			"mixX": -0.1,
+			"mixShearY": 0
+		}
+	],
+	"skins": [
+		{
+			"name": "default",
+			"attachments": {
+				"circle_fillup": {
+					"circle_fillup/circle00": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle01": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle02": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle03": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle04": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle05": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle06": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle07": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle08": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle09": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle10": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle11": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle12": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle13": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle14": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle15": { "x": -0.64, "width": 113, "height": 112 },
+					"circle_fillup/circle16": { "x": -0.64, "width": 113, "height": 112 }
+				},
+				"coin": { "coin": { "width": 214, "height": 232 } },
+				"coin3": { "text": { "width": 214, "height": 232 } },
+				"coin_blick_fx1": {
+					"coin_blick_fx/coin_blick_fx_006": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_007": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_008": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_009": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_010": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_011": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_012": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_013": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_014": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_015": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_016": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_017": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_018": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_019": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_020": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_021": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_022": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_023": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_024": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_025": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_026": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_027": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_028": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_029": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_030": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_031": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_032": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_033": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_034": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_035": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_036": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_037": { "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_038": { "width": 150, "height": 150 }
+				},
+				"coin_down": {
+					"coin": { "width": 214, "height": 232 },
+					"coin_blur": { "scaleX": 2, "scaleY": 2, "width": 135, "height": 135 }
+				},
+				"coin_down_back_side": {
+					"coin_back_side": { "y": -2.93, "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 }
+				},
+				"coin_fire-coin_shine_o_00": {
+					"sym_coin_shadow": { "color": "ffffffe0", "width": 214, "height": 232 }
+				},
+				"coin_side_center_blur": {
+					"coin_side_center_blur2": {
+						"y": -4.07,
+						"scaleX": 0.86,
+						"scaleY": 0.936,
+						"width": 70,
+						"height": 224
+					}
+				},
+				"coin_top": {
+					"coin": { "width": 214, "height": 232 },
+					"coin_blur": { "scaleX": 2, "scaleY": 2, "width": 135, "height": 135 }
+				},
+				"coin_top_back_side": {
+					"coin_back_side": { "y": -4.07, "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 }
+				},
+				"fall_top": { "fall_top": { "y": 8, "scaleX": 1.6146, "scaleY": 1.6146, "width": 170, "height": 167 } },
+				"fire_wave_fx": {
+					"fire_wave_fx/fire_wave_fx_008": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_009": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_010": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_011": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_012": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_013": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_014": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_015": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_016": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_017": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_018": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_019": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_020": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_021": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_022": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_023": { "width": 150, "height": 150 }
+				},
+				"fire_wave_fx_add": {
+					"fire_wave_fx/fire_wave_fx_008": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_009": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_010": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_011": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_012": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_013": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_014": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_015": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_016": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_017": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_018": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_019": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_020": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_021": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_022": { "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_023": { "width": 150, "height": 150 }
+				},
+				"jackpot_coin_coin_blick_fx": {
+					"coin_blick_fx/coin_blick_fx_006": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_007": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_008": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_009": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_010": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_011": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_012": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_013": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_014": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_015": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_016": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_017": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_018": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_019": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_020": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_021": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_022": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_023": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_024": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_025": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_026": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_027": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_028": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_029": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_030": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_031": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_032": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_033": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_034": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_035": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_036": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_037": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 },
+					"coin_blick_fx/coin_blick_fx_038": { "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 }
+				},
+				"jackpot_coin_fire_wave_fx": {
+					"fire_wave_fx/fire_wave_fx_008": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_009": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_010": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_011": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_012": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_013": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_014": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_015": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_016": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_017": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_018": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_019": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_020": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_021": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_022": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 },
+					"fire_wave_fx/fire_wave_fx_023": { "scaleX": 4, "scaleY": 4, "width": 150, "height": 150 }
+				},
+				"jackpot_coin_glow_back": {
+					"glow_back": { "x": -2, "scaleX": 1.32, "scaleY": 1.32, "width": 138, "height": 138 }
+				},
+				"jackpot_coin_glow_back2": {
+					"glow_back": { "x": -2, "scaleX": 1.32, "scaleY": 1.32, "width": 138, "height": 138 }
+				},
+				"jackpot_coin_light_back1": {
+					"light_back": { "scaleX": 2.5, "scaleY": 2.5, "width": 164, "height": 164 }
+				},
+				"jackpot_coin_light_back2": {
+					"light_back": { "scaleX": 2.5, "scaleY": 2.5, "width": 164, "height": 164 }
+				},
+				"jackpot_coin_particles_fx": {
+					"particles_fx2/particles_fx_08": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_09": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_10": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_11": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_12": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_13": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_14": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_15": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_16": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 }
+				},
+				"jackpot_coin_particles_fx2": {
+					"particles_fx2/particles_fx_08": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_09": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_10": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_11": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_12": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_13": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_14": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_15": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 },
+					"particles_fx2/particles_fx_16": { "scaleX": 4, "scaleY": 4, "width": 200, "height": 200 }
+				},
+				"jackpot_coin_popup_jackpot_coin": { "text": { "x": -0.5, "y": -1, "width": 214, "height": 232 } },
+				"jackpot_coin_popup_jackpot_coin1": {
+					"text": { "x": -0.5, "y": -1, "scaleX": -1, "width": 214, "height": 232 }
+				},
+				"jackpot_coin_popup_jackpot_coin1_add": {
+					"text": { "x": -0.5, "y": -1, "scaleX": -1, "width": 214, "height": 232 }
+				},
+				"jackpot_coin_popup_jackpot_coin2": { "text": { "x": -0.5, "y": -1, "width": 214, "height": 232 } },
+				"jackpot_coin_popup_jackpot_coin2_add": { "text": { "x": -0.5, "y": -1, "width": 214, "height": 232 } },
+				"jp_coin_down": {
+					"coin": { "width": 214, "height": 232 },
+					"coin_blur": { "scaleX": 2, "scaleY": 2, "width": 135, "height": 135 }
+				},
+				"jp_coin_down2": { "coin": { "width": 214, "height": 232 } },
+				"jp_coin_down_back_side": {
+					"coin_back_side": { "y": -4.07, "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 }
+				},
+				"jp_coin_side_center_blur": {
+					"coin_side_center_blur2": { "y": -3.65, "scaleX": 0.84, "scaleY": 0.99, "width": 70, "height": 224 }
+				},
+				"jp_coin_top": {
+					"coin": { "width": 214, "height": 232 },
+					"coin_blur": { "scaleX": -2, "scaleY": 2, "width": 135, "height": 135 }
+				},
+				"jp_coin_top2": { "coin": { "width": 214, "height": 232 } },
+				"jp_coin_top_back_side": {
+					"coin_back_side": { "y": -4.94, "scaleX": 2, "scaleY": 2, "width": 150, "height": 150 }
+				},
+				"light_back": { "light_back": { "width": 164, "height": 164 } },
+				"placeholderText": { "text": { "x": -0.5, "y": -1, "width": 214, "height": 232 } }
+			}
+		}
+	],
+	"animations": {
+		"add": {
+			"slots": {
+				"coin": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{
+							"time": 0.0333,
+							"color": "ffffff00",
+							"curve": [0.052, 1, 0.183, 1, 0.052, 1, 0.183, 1, 0.052, 1, 0.183, 1, 0.052, 0.45, 0.183, 1]
+						},
+						{ "time": 0.2333, "color": "ffffffff" }
+					],
+					"attachment": [{ "name": "coin" }]
+				},
+				"coin3": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{
+							"time": 0.0333,
+							"color": "ffffff00",
+							"curve": [0.052, 1, 0.183, 1, 0.052, 1, 0.183, 1, 0.052, 1, 0.183, 1, 0.052, 0.45, 0.183, 1]
+						},
+						{ "time": 0.2333, "color": "ffffffff" }
+					],
+					"attachment": [{ "name": "text" }]
+				},
+				"coin_blick_fx1": {
+					"rgba": [{ "color": "ffffffbe" }],
+					"attachment": [
+						{},
+						{ "time": 0.1333, "name": "coin_blick_fx/coin_blick_fx_012" },
+						{ "time": 0.1667, "name": "coin_blick_fx/coin_blick_fx_014" },
+						{ "time": 0.2, "name": "coin_blick_fx/coin_blick_fx_016" },
+						{ "time": 0.2333, "name": "coin_blick_fx/coin_blick_fx_018" },
+						{ "time": 0.2667, "name": "coin_blick_fx/coin_blick_fx_020" },
+						{ "time": 0.3, "name": "coin_blick_fx/coin_blick_fx_022" },
+						{ "time": 0.3333, "name": "coin_blick_fx/coin_blick_fx_024" },
+						{ "time": 0.3667, "name": "coin_blick_fx/coin_blick_fx_026" },
+						{ "time": 0.4, "name": "coin_blick_fx/coin_blick_fx_028" },
+						{ "time": 0.4333, "name": "coin_blick_fx/coin_blick_fx_030" },
+						{ "time": 0.4667, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 0.5, "name": "coin_blick_fx/coin_blick_fx_034" },
+						{ "time": 0.5333, "name": "coin_blick_fx/coin_blick_fx_036" },
+						{ "time": 0.5667, "name": "coin_blick_fx/coin_blick_fx_038" },
+						{ "time": 0.7667 }
+					]
+				},
+				"coin_fire-coin_shine_o_00": {
+					"rgba": [
+						{ "time": 0.1333, "color": "ffffff00" },
+						{ "time": 0.2333, "color": "ffffffff" }
+					]
+				},
+				"fall_top": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{
+							"time": 0.1,
+							"color": "ffffff00",
+							"curve": [0.15, 1, 0.25, 1, 0.15, 1, 0.25, 1, 0.15, 1, 0.25, 1, 0.15, 0, 0.25, 0.29]
+						},
+						{
+							"time": 0.3,
+							"color": "ffffff4b",
+							"curve": [0.417, 1, 0.65, 1, 0.417, 1, 0.65, 1, 0.417, 1, 0.65, 1, 0.417, 0.29, 0.65, 0]
+						},
+						{ "time": 0.7667, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "fall_top" }]
+				},
+				"fire_wave_fx": {
+					"rgba": [
+						{ "color": "ffffffc8", "curve": "stepped" },
+						{ "time": 0.6333, "color": "ffffffc8" },
+						{ "time": 0.7667, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.1333, "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.1667, "name": "fire_wave_fx/fire_wave_fx_009" },
+						{ "time": 0.2, "name": "fire_wave_fx/fire_wave_fx_010" },
+						{ "time": 0.2333, "name": "fire_wave_fx/fire_wave_fx_011" },
+						{ "time": 0.2667, "name": "fire_wave_fx/fire_wave_fx_012" },
+						{ "time": 0.3, "name": "fire_wave_fx/fire_wave_fx_013" },
+						{ "time": 0.3333, "name": "fire_wave_fx/fire_wave_fx_014" },
+						{ "time": 0.3667, "name": "fire_wave_fx/fire_wave_fx_015" },
+						{ "time": 0.4, "name": "fire_wave_fx/fire_wave_fx_016" },
+						{ "time": 0.4333, "name": "fire_wave_fx/fire_wave_fx_017" },
+						{ "time": 0.4667, "name": "fire_wave_fx/fire_wave_fx_018" },
+						{ "time": 0.5, "name": "fire_wave_fx/fire_wave_fx_019" },
+						{ "time": 0.5333, "name": "fire_wave_fx/fire_wave_fx_020" },
+						{ "time": 0.5667, "name": "fire_wave_fx/fire_wave_fx_021" },
+						{ "time": 0.6, "name": "fire_wave_fx/fire_wave_fx_022" },
+						{ "time": 0.6333, "name": "fire_wave_fx/fire_wave_fx_023" }
+					]
+				},
+				"fire_wave_fx_add": {
+					"rgba": [
+						{ "color": "ffffffa0", "curve": "stepped" },
+						{ "time": 0.6333, "color": "ffffffa0" },
+						{ "time": 0.7667, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.1333, "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.1667, "name": "fire_wave_fx/fire_wave_fx_009" },
+						{ "time": 0.2, "name": "fire_wave_fx/fire_wave_fx_010" },
+						{ "time": 0.2333, "name": "fire_wave_fx/fire_wave_fx_011" },
+						{ "time": 0.2667, "name": "fire_wave_fx/fire_wave_fx_012" },
+						{ "time": 0.3, "name": "fire_wave_fx/fire_wave_fx_013" },
+						{ "time": 0.3333, "name": "fire_wave_fx/fire_wave_fx_014" },
+						{ "time": 0.3667, "name": "fire_wave_fx/fire_wave_fx_015" },
+						{ "time": 0.4, "name": "fire_wave_fx/fire_wave_fx_016" },
+						{ "time": 0.4333, "name": "fire_wave_fx/fire_wave_fx_017" },
+						{ "time": 0.4667, "name": "fire_wave_fx/fire_wave_fx_018" },
+						{ "time": 0.5, "name": "fire_wave_fx/fire_wave_fx_019" },
+						{ "time": 0.5333, "name": "fire_wave_fx/fire_wave_fx_020" },
+						{ "time": 0.5667, "name": "fire_wave_fx/fire_wave_fx_021" },
+						{ "time": 0.6, "name": "fire_wave_fx/fire_wave_fx_022" },
+						{ "time": 0.6333, "name": "fire_wave_fx/fire_wave_fx_023" }
+					]
+				},
+				"light_back": {
+					"rgba": [
+						{
+							"color": "ffffff00",
+							"curve": [0.083, 1, 0.25, 1, 0.083, 1, 0.25, 1, 0.083, 1, 0.25, 1, 0.083, 0, 0.25, 1]
+						},
+						{
+							"time": 0.3333,
+							"color": "ffffffff",
+							"curve": [0.417, 1, 0.583, 1, 0.417, 1, 0.583, 1, 0.417, 1, 0.583, 1, 0.417, 1, 0.583, 0]
+						},
+						{ "time": 0.6667, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "light_back" }]
+				},
+				"placeholderText": { "rgba": [{ "color": "ffffff00" }] }
+			},
+			"bones": {
+				"coin": {
+					"translate": [{}],
+					"scale": [
+						{ "x": 0, "y": 0, "curve": "stepped" },
+						{ "time": 0.0333, "x": 0, "y": 0, "curve": [0.083, 0, 0.183, 1.06, 0.083, 0, 0.183, 1.06] },
+						{
+							"time": 0.2333,
+							"x": 1.06,
+							"y": 1.06,
+							"curve": [0.275, 1.06, 0.358, 0.98, 0.275, 1.06, 0.358, 0.98]
+						},
+						{
+							"time": 0.4,
+							"x": 0.98,
+							"y": 0.98,
+							"curve": [0.458, 0.98, 0.575, 1.02, 0.458, 0.98, 0.575, 1.02]
+						},
+						{
+							"time": 0.6333,
+							"x": 1.02,
+							"y": 1.02,
+							"curve": [0.667, 1.02, 0.733, 1, 0.667, 1.02, 0.733, 1]
+						},
+						{ "time": 0.7667 }
+					]
+				},
+				"coin_blick_fx1": {
+					"translate": [{ "time": 0.1, "x": 3.04 }],
+					"scale": [
+						{ "time": 0.1, "x": 0.869, "y": 0.869, "curve": "stepped" },
+						{
+							"time": 0.1667,
+							"x": 0.869,
+							"y": 0.869,
+							"curve": [0.367, 0.869, 0.567, 1.197, 0.367, 0.869, 0.567, 1.197]
+						},
+						{ "time": 0.7667, "x": 1.197, "y": 1.197 }
+					]
+				},
+				"light_back": {
+					"scale": [
+						{ "x": 1.5, "curve": [0.041, 3.36, 0.5, 4, 0.041, 1.744, 0.5, 2] },
+						{ "time": 0.6667, "x": 4, "y": 2 }
+					]
+				},
+				"fire_wave_fx": {
+					"scale": [
+						{ "x": 0.5, "y": 0.5, "curve": [0.004, 1.494, 0.285, 2.694, 0.004, 1.494, 0.285, 2.694] },
+						{
+							"time": 0.6333,
+							"x": 2.947,
+							"y": 2.947,
+							"curve": [0.678, 2.979, 0.722, 3.179, 0.678, 2.979, 0.722, 3.179]
+						},
+						{ "time": 0.7667, "x": 3.179, "y": 3.179 }
+					]
+				}
+			}
+		},
+		"collect": {
+			"slots": {
+				"coin": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "coin" }] },
+				"coin3": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "text" }] },
+				"coin_blick_fx1": {
+					"rgba": [{ "color": "ffffffbe" }],
+					"attachment": [
+						{},
+						{ "time": 0.1333, "name": "coin_blick_fx/coin_blick_fx_012" },
+						{ "time": 0.1667, "name": "coin_blick_fx/coin_blick_fx_014" },
+						{ "time": 0.2, "name": "coin_blick_fx/coin_blick_fx_016" },
+						{ "time": 0.2333, "name": "coin_blick_fx/coin_blick_fx_018" },
+						{ "time": 0.2667, "name": "coin_blick_fx/coin_blick_fx_020" },
+						{ "time": 0.3, "name": "coin_blick_fx/coin_blick_fx_022" },
+						{ "time": 0.3333, "name": "coin_blick_fx/coin_blick_fx_024" },
+						{ "time": 0.3667, "name": "coin_blick_fx/coin_blick_fx_026" },
+						{ "time": 0.4, "name": "coin_blick_fx/coin_blick_fx_028" },
+						{ "time": 0.4333, "name": "coin_blick_fx/coin_blick_fx_030" },
+						{ "time": 0.4667, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 0.5 }
+					]
+				},
+				"coin_fire-coin_shine_o_00": {
+					"rgba": [
+						{ "time": 0.1333, "color": "ffffff00" },
+						{ "time": 0.2333, "color": "ffffffff" }
+					]
+				},
+				"fall_top": {
+					"rgba": [
+						{
+							"color": "ffffff00",
+							"curve": [0.05, 1, 0.15, 1, 0.05, 1, 0.15, 1, 0.05, 1, 0.15, 1, 0.05, 0, 0.15, 0.29]
+						},
+						{
+							"time": 0.2,
+							"color": "ffffff4b",
+							"curve": [0.275, 1, 0.425, 1, 0.275, 1, 0.425, 1, 0.275, 1, 0.425, 1, 0.275, 0.29, 0.425, 0]
+						},
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "fall_top" }]
+				},
+				"fire_wave_fx": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{ "time": 0.1, "color": "ffffff00" },
+						{ "time": 0.3667, "color": "ffffffc8" },
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.0333, "name": "fire_wave_fx/fire_wave_fx_009" },
+						{ "time": 0.0667, "name": "fire_wave_fx/fire_wave_fx_010" },
+						{ "time": 0.1, "name": "fire_wave_fx/fire_wave_fx_011" },
+						{ "time": 0.1333, "name": "fire_wave_fx/fire_wave_fx_012" },
+						{ "time": 0.1667, "name": "fire_wave_fx/fire_wave_fx_013" },
+						{ "time": 0.2, "name": "fire_wave_fx/fire_wave_fx_014" },
+						{ "time": 0.2333, "name": "fire_wave_fx/fire_wave_fx_015" },
+						{ "time": 0.2667, "name": "fire_wave_fx/fire_wave_fx_016" },
+						{ "time": 0.3, "name": "fire_wave_fx/fire_wave_fx_017" },
+						{ "time": 0.3333, "name": "fire_wave_fx/fire_wave_fx_018" },
+						{ "time": 0.3667, "name": "fire_wave_fx/fire_wave_fx_019" },
+						{ "time": 0.4, "name": "fire_wave_fx/fire_wave_fx_020" },
+						{ "time": 0.4333, "name": "fire_wave_fx/fire_wave_fx_021" },
+						{ "time": 0.4667, "name": "fire_wave_fx/fire_wave_fx_022" },
+						{ "time": 0.5, "name": "fire_wave_fx/fire_wave_fx_023" }
+					]
+				},
+				"fire_wave_fx_add": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{ "time": 0.1, "color": "ffffff00" },
+						{ "time": 0.3667, "color": "ffffffa0" },
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.0333, "name": "fire_wave_fx/fire_wave_fx_009" },
+						{ "time": 0.0667, "name": "fire_wave_fx/fire_wave_fx_010" },
+						{ "time": 0.1, "name": "fire_wave_fx/fire_wave_fx_011" },
+						{ "time": 0.1333, "name": "fire_wave_fx/fire_wave_fx_012" },
+						{ "time": 0.1667, "name": "fire_wave_fx/fire_wave_fx_013" },
+						{ "time": 0.2, "name": "fire_wave_fx/fire_wave_fx_014" },
+						{ "time": 0.2333, "name": "fire_wave_fx/fire_wave_fx_015" },
+						{ "time": 0.2667, "name": "fire_wave_fx/fire_wave_fx_016" },
+						{ "time": 0.3, "name": "fire_wave_fx/fire_wave_fx_017" },
+						{ "time": 0.3333, "name": "fire_wave_fx/fire_wave_fx_018" },
+						{ "time": 0.3667, "name": "fire_wave_fx/fire_wave_fx_019" },
+						{ "time": 0.4, "name": "fire_wave_fx/fire_wave_fx_020" },
+						{ "time": 0.4333, "name": "fire_wave_fx/fire_wave_fx_021" },
+						{ "time": 0.4667, "name": "fire_wave_fx/fire_wave_fx_022" },
+						{ "time": 0.5, "name": "fire_wave_fx/fire_wave_fx_023" }
+					]
+				},
+				"jackpot_coin_popup_jackpot_coin": { "attachment": [{}] },
+				"light_back": {
+					"rgba": [
+						{
+							"color": "ffffff00",
+							"curve": [0.063, 1, 0.203, 1, 0.063, 1, 0.203, 1, 0.063, 1, 0.203, 1, 0.063, 0, 0.203, 1]
+						},
+						{
+							"time": 0.2667,
+							"color": "ffffffff",
+							"curve": [0.33, 1, 0.437, 1, 0.33, 1, 0.437, 1, 0.33, 1, 0.437, 1, 0.33, 1, 0.437, 0]
+						},
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "light_back" }]
+				},
+				"placeholderText": { "rgba": [{ "color": "ffffffff" }], "attachment": [{}] }
+			},
+			"bones": {
+				"coin": {
+					"translate": [{}],
+					"scale": [
+						{ "curve": [0.033, 1, 0.067, 1.071, 0.033, 1, 0.067, 1.071] },
+						{
+							"time": 0.1,
+							"x": 1.071,
+							"y": 1.071,
+							"curve": [0.144, 1.071, 0.189, 0.98, 0.144, 1.071, 0.189, 0.98]
+						},
+						{
+							"time": 0.2333,
+							"x": 0.98,
+							"y": 0.98,
+							"curve": [0.278, 0.98, 0.322, 1.02, 0.278, 0.98, 0.322, 1.02]
+						},
+						{
+							"time": 0.3667,
+							"x": 1.02,
+							"y": 1.02,
+							"curve": [0.411, 1.02, 0.456, 1, 0.411, 1.02, 0.456, 1]
+						},
+						{ "time": 0.5 }
+					]
+				},
+				"coin_blick_fx1": { "translate": [{ "time": 0.1, "x": 3.04 }], "scale": [{ "x": 0.995, "y": 0.995 }] },
+				"light_back": {
+					"scale": [
+						{ "x": 1.5, "curve": [0.031, 2.895, 0.375, 4, 0.031, 1.558, 0.375, 2] },
+						{ "time": 0.5, "x": 4, "y": 2 }
+					]
+				},
+				"coin3": {
+					"scale": [
+						{ "curve": [0.05, 1, 0.117, 1.183, 0.05, 1, 0.117, 1.183] },
+						{
+							"time": 0.1667,
+							"x": 1.183,
+							"y": 1.183,
+							"curve": [0.217, 1.183, 0.25, 0.904, 0.217, 1.183, 0.25, 0.904]
+						},
+						{
+							"time": 0.3,
+							"x": 0.904,
+							"y": 0.904,
+							"curve": [0.367, 0.904, 0.433, 1, 0.367, 0.904, 0.433, 1]
+						},
+						{ "time": 0.5 }
+					]
+				},
+				"placeholderText": {
+					"scale": [
+						{ "curve": [0.033, 1.038, 0.067, 1.113, 0.033, 1.038, 0.067, 1.113] },
+						{
+							"time": 0.1,
+							"x": 1.113,
+							"y": 1.113,
+							"curve": [0.179, 1.113, 0.221, 0.95, 0.179, 1.113, 0.221, 0.95]
+						},
+						{
+							"time": 0.3,
+							"x": 0.95,
+							"y": 0.95,
+							"curve": [0.344, 0.95, 0.389, 0.987, 0.344, 0.95, 0.389, 0.987]
+						},
+						{ "time": 0.4333 }
+					]
+				},
+				"fire_wave_fx": {
+					"scale": [
+						{ "x": 0.5, "y": 0.5, "curve": [0.003, 1.383, 0.058, 2.723, 0.003, 1.383, 0.058, 2.723] },
+						{
+							"time": 0.3667,
+							"x": 2.947,
+							"y": 2.947,
+							"curve": [0.411, 2.979, 0.455, 3.179, 0.411, 2.979, 0.455, 3.179]
+						},
+						{ "time": 0.5, "x": 3.179, "y": 3.179 }
+					]
+				},
+				"jackpot_coin_popup": {
+					"scale": [
+						{ "curve": [0.05, 1, 0.117, 1.183, 0.05, 1, 0.117, 1.183] },
+						{
+							"time": 0.1667,
+							"x": 1.183,
+							"y": 1.183,
+							"curve": [0.217, 1.183, 0.25, 0.904, 0.217, 1.183, 0.25, 0.904]
+						},
+						{
+							"time": 0.3,
+							"x": 0.904,
+							"y": 0.904,
+							"curve": [0.367, 0.904, 0.433, 1, 0.367, 0.904, 0.433, 1]
+						},
+						{ "time": 0.5 }
+					]
+				}
+			},
+			"drawOrder": [{ "offsets": [{ "slot": "coin3", "offset": 29 }] }]
+		},
+		"idle": {
+			"slots": {
+				"coin": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "coin" }] },
+				"coin3": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "text" }] },
+				"coin_blick_fx1": {
+					"rgba": [
+						{ "color": "ffffff00" },
+						{ "time": 0.3667, "color": "ffffff78", "curve": "stepped" },
+						{ "time": 1.4333, "color": "ffffff78" },
+						{ "time": 1.6333, "color": "ffffff00", "curve": "stepped" },
+						{ "time": 2, "color": "ffffff00" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.0333, "name": "coin_blick_fx/coin_blick_fx_006" },
+						{ "time": 0.3667, "name": "coin_blick_fx/coin_blick_fx_006" },
+						{ "time": 0.4, "name": "coin_blick_fx/coin_blick_fx_007" },
+						{ "time": 0.4333, "name": "coin_blick_fx/coin_blick_fx_008" },
+						{ "time": 0.4667, "name": "coin_blick_fx/coin_blick_fx_009" },
+						{ "time": 0.5, "name": "coin_blick_fx/coin_blick_fx_010" },
+						{ "time": 0.5333, "name": "coin_blick_fx/coin_blick_fx_011" },
+						{ "time": 0.5667, "name": "coin_blick_fx/coin_blick_fx_012" },
+						{ "time": 0.6, "name": "coin_blick_fx/coin_blick_fx_013" },
+						{ "time": 0.6333, "name": "coin_blick_fx/coin_blick_fx_014" },
+						{ "time": 0.6667, "name": "coin_blick_fx/coin_blick_fx_015" },
+						{ "time": 0.7, "name": "coin_blick_fx/coin_blick_fx_016" },
+						{ "time": 0.7333, "name": "coin_blick_fx/coin_blick_fx_017" },
+						{ "time": 0.7667, "name": "coin_blick_fx/coin_blick_fx_018" },
+						{ "time": 0.8, "name": "coin_blick_fx/coin_blick_fx_019" },
+						{ "time": 0.8333, "name": "coin_blick_fx/coin_blick_fx_020" },
+						{ "time": 0.8667, "name": "coin_blick_fx/coin_blick_fx_021" },
+						{ "time": 0.9, "name": "coin_blick_fx/coin_blick_fx_022" },
+						{ "time": 0.9333, "name": "coin_blick_fx/coin_blick_fx_023" },
+						{ "time": 0.9667, "name": "coin_blick_fx/coin_blick_fx_024" },
+						{ "time": 1, "name": "coin_blick_fx/coin_blick_fx_025" },
+						{ "time": 1.0333, "name": "coin_blick_fx/coin_blick_fx_026" },
+						{ "time": 1.0667, "name": "coin_blick_fx/coin_blick_fx_027" },
+						{ "time": 1.1, "name": "coin_blick_fx/coin_blick_fx_028" },
+						{ "time": 1.1333, "name": "coin_blick_fx/coin_blick_fx_029" },
+						{ "time": 1.1667, "name": "coin_blick_fx/coin_blick_fx_030" },
+						{ "time": 1.2, "name": "coin_blick_fx/coin_blick_fx_031" },
+						{ "time": 1.2333, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 1.2667, "name": "coin_blick_fx/coin_blick_fx_033" },
+						{ "time": 1.3, "name": "coin_blick_fx/coin_blick_fx_034" },
+						{ "time": 1.3333, "name": "coin_blick_fx/coin_blick_fx_035" },
+						{ "time": 1.3667, "name": "coin_blick_fx/coin_blick_fx_036" },
+						{ "time": 1.4, "name": "coin_blick_fx/coin_blick_fx_037" },
+						{ "time": 1.4333, "name": "coin_blick_fx/coin_blick_fx_038" },
+						{ "time": 2 }
+					]
+				},
+				"coin_fire-coin_shine_o_00": { "rgba": [{ "color": "ffffffff" }] },
+				"fall_top": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}] },
+				"fire_wave_fx": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}] },
+				"fire_wave_fx_add": { "attachment": [{}] },
+				"light_back": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}] },
+				"placeholderText": { "rgba": [{ "color": "ffffff00" }] }
+			},
+			"bones": {
+				"coin": { "rotate": [{}], "translate": [{}], "scale": [{}] },
+				"coin3": { "translate": [{}] },
+				"coin_blick_fx1": { "scale": [{ "x": 0.98, "y": 0.98 }] },
+				"coin_fire/coin_shine_o_00": { "scale": [{}] }
+			}
+		},
+		"land": {
+			"slots": {
+				"circle_fillup": {
+					"attachment": [
+						{ "name": "circle_fillup/circle01" },
+						{ "time": 0.0333, "name": "circle_fillup/circle02" },
+						{ "time": 0.0667, "name": "circle_fillup/circle03" },
+						{ "time": 0.1, "name": "circle_fillup/circle04" },
+						{ "time": 0.1333, "name": "circle_fillup/circle05" },
+						{ "time": 0.1667, "name": "circle_fillup/circle06" },
+						{ "time": 0.2, "name": "circle_fillup/circle07" },
+						{ "time": 0.2333, "name": "circle_fillup/circle08" },
+						{ "time": 0.2667, "name": "circle_fillup/circle09" },
+						{ "time": 0.3, "name": "circle_fillup/circle10" },
+						{ "time": 0.3333, "name": "circle_fillup/circle11" },
+						{ "time": 0.3667, "name": "circle_fillup/circle12" },
+						{ "time": 0.4, "name": "circle_fillup/circle13" },
+						{ "time": 0.4333, "name": "circle_fillup/circle14" },
+						{ "time": 0.4667, "name": "circle_fillup/circle15" },
+						{ "time": 0.5 }
+					]
+				},
+				"coin": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "coin" }] },
+				"coin3": { "rgba": [{ "color": "ffffffff" }], "attachment": [{ "name": "text" }] },
+				"coin_blick_fx1": {
+					"rgba": [
+						{
+							"color": "ffffff00",
+							"curve": [0.075, 1, 0.225, 1, 0.075, 1, 0.225, 1, 0.075, 1, 0.225, 1, 0.075, 0, 0.225, 0.71]
+						},
+						{
+							"time": 0.3,
+							"color": "ffffffb4",
+							"curve": [0.35, 1, 0.45, 1, 0.35, 1, 0.45, 1, 0.35, 1, 0.45, 1, 0.35, 0.71, 0.45, 0]
+						},
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "coin_blick_fx/coin_blick_fx_008" },
+						{ "time": 0.0333, "name": "coin_blick_fx/coin_blick_fx_010" },
+						{ "time": 0.0667, "name": "coin_blick_fx/coin_blick_fx_012" },
+						{ "time": 0.1, "name": "coin_blick_fx/coin_blick_fx_014" },
+						{ "time": 0.1333, "name": "coin_blick_fx/coin_blick_fx_016" },
+						{ "time": 0.1667, "name": "coin_blick_fx/coin_blick_fx_018" },
+						{ "time": 0.2, "name": "coin_blick_fx/coin_blick_fx_020" },
+						{ "time": 0.2333, "name": "coin_blick_fx/coin_blick_fx_022" },
+						{ "time": 0.2667, "name": "coin_blick_fx/coin_blick_fx_024" },
+						{ "time": 0.3, "name": "coin_blick_fx/coin_blick_fx_026" },
+						{ "time": 0.3333, "name": "coin_blick_fx/coin_blick_fx_028" },
+						{ "time": 0.3667, "name": "coin_blick_fx/coin_blick_fx_030" },
+						{ "time": 0.4, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 0.4333, "name": "coin_blick_fx/coin_blick_fx_034" },
+						{ "time": 0.4667, "name": "coin_blick_fx/coin_blick_fx_036" },
+						{ "time": 0.5 }
+					]
+				},
+				"coin_fire-coin_shine_o_00": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{ "time": 0.1667, "color": "ffffff00" },
+						{ "time": 0.4333, "color": "ffffffff" }
+					]
+				},
+				"fall_top": { "rgba": [{ "color": "ffffff00" }], "attachment": [{ "name": "fall_top" }] },
+				"fire_wave_fx": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}] },
+				"fire_wave_fx_add": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}] },
+				"light_back": {
+					"rgba": [
+						{
+							"color": "ffffff00",
+							"curve": [0.083, 1, 0.25, 1, 0.083, 1, 0.25, 1, 0.083, 1, 0.25, 1, 0.083, 0, 0.25, 1]
+						},
+						{
+							"time": 0.3333,
+							"color": "ffffffff",
+							"curve": [0.375, 1, 0.458, 1, 0.375, 1, 0.458, 1, 0.375, 1, 0.458, 1, 0.375, 1, 0.458, 0]
+						},
+						{ "time": 0.5, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "light_back" }]
+				},
+				"placeholderText": { "rgba": [{ "color": "ffffffff" }], "attachment": [{}] }
+			},
+			"bones": {
+				"coin": {
+					"translate": [{}],
+					"scale": [
+						{ "curve": [0.042, 1, 0.125, 1.139, 0.042, 1, 0.125, 1.139] },
+						{
+							"time": 0.1667,
+							"x": 1.139,
+							"y": 1.139,
+							"curve": [0.217, 1.139, 0.317, 0.92, 0.217, 1.139, 0.317, 0.92]
+						},
+						{ "time": 0.3667, "x": 0.92, "y": 0.92, "curve": [0.4, 0.92, 0.467, 1, 0.4, 0.92, 0.467, 1] },
+						{ "time": 0.5 }
+					]
+				},
+				"coin_blick_fx1": { "rotate": [{ "value": 60 }] },
+				"light_back": {
+					"scale": [
+						{ "x": 1.5, "curve": [0.031, 2.895, 0.375, 4, 0.031, 1.558, 0.375, 2] },
+						{ "time": 0.5, "x": 4, "y": 2 }
+					]
+				},
+				"fire_wave_fx": { "scale": [{ "x": 2, "y": 2 }] },
+				"coin3": {
+					"scale": [
+						{ "curve": [0.033, 1.037, 0.067, 1.11, 0.033, 1.037, 0.067, 1.11] },
+						{
+							"time": 0.1,
+							"x": 1.11,
+							"y": 1.11,
+							"curve": [0.189, 1.11, 0.278, 0.95, 0.189, 1.11, 0.278, 0.95]
+						},
+						{
+							"time": 0.3667,
+							"x": 0.95,
+							"y": 0.95,
+							"curve": [0.411, 0.95, 0.456, 0.987, 0.411, 0.95, 0.456, 0.987]
+						},
+						{ "time": 0.5 }
+					]
+				},
+				"placeholderText": {
+					"scale": [
+						{ "time": 0.0667, "curve": [0.111, 1.05, 0.156, 1.113, 0.111, 1.05, 0.156, 1.113] },
+						{
+							"time": 0.2,
+							"x": 1.113,
+							"y": 1.113,
+							"curve": [0.266, 1.113, 0.301, 0.95, 0.266, 1.113, 0.301, 0.95]
+						},
+						{
+							"time": 0.3667,
+							"x": 0.95,
+							"y": 0.95,
+							"curve": [0.411, 0.95, 0.456, 0.987, 0.411, 0.95, 0.456, 0.987]
+						},
+						{ "time": 0.5 }
+					]
+				},
+				"circle_fillup": { "translate": [{ "x": -0.29, "y": -3.05 }], "scale": [{ "x": 1.028, "y": 1.028 }] }
+			}
+		},
+		"win": {
+			"slots": {
+				"coin": {
+					"rgba": [{ "time": 1, "color": "ffffffff" }],
+					"attachment": [{ "name": "coin" }, { "time": 0.0333 }, { "time": 1, "name": "coin" }]
+				},
+				"coin3": {
+					"rgba": [{ "time": 1, "color": "ffffffff" }],
+					"attachment": [{ "name": "text" }, { "time": 0.0333 }, { "time": 1, "name": "text" }]
+				},
+				"coin_blick_fx1": { "rgba": [{ "color": "ffffff00" }], "attachment": [{}, { "time": 1 }] },
+				"coin_fire-coin_shine_o_00": {
+					"rgba": [
+						{ "color": "ffffffff" },
+						{ "time": 0.1, "color": "ffffff00", "curve": "stepped" },
+						{ "time": 0.8333, "color": "ffffff00" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [{ "time": 0.0333 }, { "time": 0.8333, "name": "sym_coin_shadow" }]
+				},
+				"coin_side_center_blur": { "attachment": [{ "time": 0.3333 }] },
+				"fall_top": { "rgba": [{ "time": 1, "color": "ffffff00" }], "attachment": [{ "time": 1 }] },
+				"fire_wave_fx": { "rgba": [{ "color": "ffffff00" }], "attachment": [{ "time": 1 }] },
+				"fire_wave_fx_add": { "attachment": [{ "time": 1 }] },
+				"jackpot_coin_coin_blick_fx": {
+					"rgba": [
+						{ "color": "ffffffff" },
+						{ "time": 0.2333, "color": "ffffff00" },
+						{ "time": 0.3333, "color": "ffffffff" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.0333, "name": "coin_blick_fx/coin_blick_fx_028" },
+						{ "time": 0.0667, "name": "coin_blick_fx/coin_blick_fx_029" },
+						{ "time": 0.1, "name": "coin_blick_fx/coin_blick_fx_030" },
+						{ "time": 0.1333, "name": "coin_blick_fx/coin_blick_fx_031" },
+						{ "time": 0.1667, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 0.2, "name": "coin_blick_fx/coin_blick_fx_033" },
+						{ "time": 0.2333, "name": "coin_blick_fx/coin_blick_fx_034" },
+						{ "time": 0.2667, "name": "coin_blick_fx/coin_blick_fx_035" },
+						{ "time": 0.3333, "name": "coin_blick_fx/coin_blick_fx_006" },
+						{ "time": 0.3667, "name": "coin_blick_fx/coin_blick_fx_008" },
+						{ "time": 0.4, "name": "coin_blick_fx/coin_blick_fx_010" },
+						{ "time": 0.4333, "name": "coin_blick_fx/coin_blick_fx_011" },
+						{ "time": 0.4667, "name": "coin_blick_fx/coin_blick_fx_013" },
+						{ "time": 0.5, "name": "coin_blick_fx/coin_blick_fx_014" },
+						{ "time": 0.5333, "name": "coin_blick_fx/coin_blick_fx_016" },
+						{ "time": 0.5667, "name": "coin_blick_fx/coin_blick_fx_018" },
+						{ "time": 0.6, "name": "coin_blick_fx/coin_blick_fx_019" },
+						{ "time": 0.6333, "name": "coin_blick_fx/coin_blick_fx_021" },
+						{ "time": 0.6667, "name": "coin_blick_fx/coin_blick_fx_022" },
+						{ "time": 0.7, "name": "coin_blick_fx/coin_blick_fx_024" },
+						{ "time": 0.7333, "name": "coin_blick_fx/coin_blick_fx_026" },
+						{ "time": 0.7667, "name": "coin_blick_fx/coin_blick_fx_027" },
+						{ "time": 0.8, "name": "coin_blick_fx/coin_blick_fx_029" },
+						{ "time": 0.8333, "name": "coin_blick_fx/coin_blick_fx_031" },
+						{ "time": 0.8667, "name": "coin_blick_fx/coin_blick_fx_032" },
+						{ "time": 0.9, "name": "coin_blick_fx/coin_blick_fx_034" },
+						{ "time": 0.9333, "name": "coin_blick_fx/coin_blick_fx_035" },
+						{ "time": 0.9667, "name": "coin_blick_fx/coin_blick_fx_037" },
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_fire_wave_fx": {
+					"rgba": [
+						{ "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.5, "name": "fire_wave_fx/fire_wave_fx_008" },
+						{ "time": 0.5333, "name": "fire_wave_fx/fire_wave_fx_009" },
+						{ "time": 0.5667, "name": "fire_wave_fx/fire_wave_fx_010" },
+						{ "time": 0.6, "name": "fire_wave_fx/fire_wave_fx_011" },
+						{ "time": 0.6333, "name": "fire_wave_fx/fire_wave_fx_012" },
+						{ "time": 0.6667, "name": "fire_wave_fx/fire_wave_fx_013" },
+						{ "time": 0.7, "name": "fire_wave_fx/fire_wave_fx_014" },
+						{ "time": 0.7333, "name": "fire_wave_fx/fire_wave_fx_015" },
+						{ "time": 0.7667, "name": "fire_wave_fx/fire_wave_fx_016" },
+						{ "time": 0.8, "name": "fire_wave_fx/fire_wave_fx_017" },
+						{ "time": 0.8333, "name": "fire_wave_fx/fire_wave_fx_018" },
+						{ "time": 0.8667, "name": "fire_wave_fx/fire_wave_fx_019" },
+						{ "time": 0.9, "name": "fire_wave_fx/fire_wave_fx_020" },
+						{ "time": 0.9333, "name": "fire_wave_fx/fire_wave_fx_021" },
+						{ "time": 0.9667, "name": "fire_wave_fx/fire_wave_fx_022" },
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_glow_back": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{
+							"time": 0.2333,
+							"color": "ffffff00",
+							"curve": [0.361, 1, 0.4, 1, 0.361, 1, 0.4, 1, 0.361, 1, 0.4, 1, 0.361, 0, 0.4, 1]
+						},
+						{
+							"time": 0.5,
+							"color": "ffffffff",
+							"curve": [0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 1, 0.667, 1, 0.833, 0]
+						},
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [{}, { "time": 0.2333, "name": "glow_back" }, { "time": 1 }]
+				},
+				"jackpot_coin_glow_back2": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "glow_back" }, { "time": 1, "name": "glow_back" }]
+				},
+				"jackpot_coin_light_back1": {
+					"rgba": [
+						{ "color": "ffffff01" },
+						{ "time": 0.1, "color": "ffffffff" },
+						{ "time": 0.3, "color": "ffffff01" },
+						{ "time": 0.5, "color": "ffffffff" },
+						{ "time": 0.6667, "color": "ffffff01" },
+						{ "time": 0.8333, "color": "ffffffff" },
+						{ "time": 1, "color": "ffffff01" }
+					],
+					"attachment": [{ "name": "light_back" }, { "time": 1, "name": "light_back" }]
+				},
+				"jackpot_coin_light_back2": {
+					"rgba": [
+						{ "color": "ffffff01" },
+						{ "time": 0.2333, "color": "ffffffff" },
+						{ "time": 0.4333, "color": "ffffff01" },
+						{ "time": 0.6, "color": "ffffffff" },
+						{ "time": 0.7667, "color": "ffffff01", "curve": "stepped" },
+						{ "time": 1, "color": "ffffff01" }
+					],
+					"attachment": [{ "name": "light_back" }, { "time": 1, "name": "light_back" }]
+				},
+				"jackpot_coin_particles_fx": {
+					"rgba": [
+						{ "color": "ffffffff" },
+						{ "time": 0.4667, "color": "ffffff00" },
+						{ "time": 0.5667, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 0.8333, "color": "ffffffff" },
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.4667, "name": "particles_fx2/particles_fx_08" },
+						{ "time": 0.7333, "name": "particles_fx2/particles_fx_08" },
+						{ "time": 0.7667, "name": "particles_fx2/particles_fx_09" },
+						{ "time": 0.8, "name": "particles_fx2/particles_fx_10" },
+						{ "time": 0.8333, "name": "particles_fx2/particles_fx_11" },
+						{ "time": 0.8667, "name": "particles_fx2/particles_fx_12" },
+						{ "time": 0.9, "name": "particles_fx2/particles_fx_13" },
+						{ "time": 0.9333, "name": "particles_fx2/particles_fx_14" },
+						{ "time": 0.9667, "name": "particles_fx2/particles_fx_15" },
+						{ "time": 1, "name": "particles_fx2/particles_fx_16" }
+					]
+				},
+				"jackpot_coin_particles_fx2": {
+					"rgba": [
+						{
+							"color": "ffffffff",
+							"curve": [0.618, 1, 0.213, 1, 0.618, 1, 0.213, 1, 0.618, 1, 0.213, 1, 0.618, 1, 0.213, 0]
+						},
+						{ "time": 0.5667, "color": "ffffff00" },
+						{ "time": 0.6, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.5667, "name": "particles_fx2/particles_fx_08" },
+						{ "time": 0.6333, "name": "particles_fx2/particles_fx_08" },
+						{ "time": 0.6667, "name": "particles_fx2/particles_fx_09" },
+						{ "time": 0.7, "name": "particles_fx2/particles_fx_10" },
+						{ "time": 0.7333, "name": "particles_fx2/particles_fx_11" },
+						{ "time": 0.7667, "name": "particles_fx2/particles_fx_12" },
+						{ "time": 0.8, "name": "particles_fx2/particles_fx_13" },
+						{ "time": 0.8333, "name": "particles_fx2/particles_fx_14" },
+						{ "time": 0.8667, "name": "particles_fx2/particles_fx_15" },
+						{ "time": 0.9, "name": "particles_fx2/particles_fx_16" },
+						{ "time": 0.9333 },
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_popup_jackpot_coin": {
+					"rgba": [
+						{ "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [{}, { "time": 1 }]
+				},
+				"jackpot_coin_popup_jackpot_coin1": {
+					"rgba": [
+						{
+							"color": "ffffffff",
+							"curve": [
+								0.053, 1, 0.162, 0.8, 0.053, 1, 0.162, 0.72, 0.053, 1, 0.162, 0.72, 0.053, 1, 0.162, 1
+							]
+						},
+						{ "time": 0.2333, "color": "ccb7b7ff", "curve": "stepped" },
+						{ "time": 1, "color": "ccb7b7ff" }
+					],
+					"attachment": [{}, { "time": 0.0333, "name": "text" }, { "time": 0.2333 }, { "time": 1 }]
+				},
+				"jackpot_coin_popup_jackpot_coin1_add": {
+					"rgba": [
+						{ "color": "ffffff00" },
+						{ "time": 0.2333, "color": "ffffffb4" },
+						{ "time": 1, "color": "ccb7b7ff" }
+					],
+					"attachment": [{}, { "time": 0.0333, "name": "text" }, { "time": 0.2333 }, { "time": 1 }]
+				},
+				"jackpot_coin_popup_jackpot_coin2": {
+					"rgba": [
+						{ "color": "ccb7b7ff", "curve": "stepped" },
+						{ "time": 0.2333, "color": "ccb7b7ff" },
+						{ "time": 0.3333, "color": "ffffffff" },
+						{ "time": 0.8, "color": "ccb7b7ff" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [{}, { "time": 0.2333, "name": "text" }, { "time": 1 }]
+				},
+				"jackpot_coin_popup_jackpot_coin2_add": {
+					"rgba": [
+						{ "color": "ffffffb4", "curve": "stepped" },
+						{ "time": 0.2333, "color": "ffffffb4", "curve": "stepped" },
+						{
+							"time": 0.3333,
+							"color": "ffffffb4",
+							"curve": [
+								0.407, 1, 0.493, 1, 0.407, 1, 0.493, 1, 0.407, 1, 0.493, 1, 0.407, 0.71, 0.493, 0.71
+							]
+						},
+						{
+							"time": 0.5667,
+							"color": "ffffffb6",
+							"curve": [
+								0.643, 1, 0.662, 1, 0.643, 1, 0.662, 1, 0.643, 1, 0.662, 1, 0.643, 0.71, 0.662, 0.71
+							]
+						},
+						{ "time": 0.8, "color": "ffffffb4" },
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [{}, { "time": 0.2333, "name": "text" }, { "time": 1 }]
+				},
+				"jp_coin_down": {
+					"rgba": [
+						{ "color": "ffffffff" },
+						{ "time": 0.1667, "color": "ccb7b7ff" },
+						{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.0333, "name": "coin_blur" },
+						{ "time": 0.2333, "name": "coin" },
+						{ "time": 1 }
+					]
+				},
+				"jp_coin_down2": {
+					"rgba": [
+						{ "color": "ffffffff" },
+						{ "time": 0.1667, "color": "d6c5c500" },
+						{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 0.9, "color": "ffffffff" },
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [{ "name": "coin" }, { "time": 0.2333, "name": "coin" }, { "time": 1 }]
+				},
+				"jp_coin_down_back_side": {
+					"rgba": [
+						{ "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [{}, { "time": 0.0333, "name": "coin_back_side" }, { "time": 0.3333 }, { "time": 1 }]
+				},
+				"jp_coin_side_center_blur": {
+					"rgba": [
+						{ "color": "ffffff00" },
+						{ "time": 0.0333, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 0.4, "color": "ffffffff" },
+						{ "time": 0.4667, "color": "ffffff00", "curve": "stepped" },
+						{ "time": 1, "color": "ffffff00" }
+					],
+					"attachment": [
+						{ "name": "coin_side_center_blur2" },
+						{ "time": 0.3333 },
+						{ "time": 1, "name": "coin_side_center_blur2" }
+					]
+				},
+				"jp_coin_top": {
+					"rgba": [
+						{ "color": "ccb7b7ff", "curve": "stepped" },
+						{ "time": 0.1667, "color": "ccb7b7ff" },
+						{ "time": 0.2333, "color": "e0d4d4ff" },
+						{ "time": 0.3333, "color": "ffffff00" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [
+						{},
+						{ "time": 0.0333, "name": "coin_blur" },
+						{ "time": 0.1667, "name": "coin" },
+						{ "time": 0.2333, "name": "coin_blur" },
+						{ "time": 0.3667 }
+					]
+				},
+				"jp_coin_top2": {
+					"rgba": [
+						{ "color": "ccb7b7ff", "curve": "stepped" },
+						{ "time": 0.1667, "color": "ccb7b7ff" },
+						{ "time": 0.3333, "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [
+						{ "name": "coin" },
+						{ "time": 0.1667, "name": "coin" },
+						{ "time": 0.8333 },
+						{ "time": 1 }
+					]
+				},
+				"jp_coin_top_back_side": {
+					"rgba": [
+						{ "color": "ffffffff", "curve": "stepped" },
+						{ "time": 1, "color": "ffffffff" }
+					],
+					"attachment": [{}, { "time": 0.0333, "name": "coin_back_side" }, { "time": 0.3333 }, { "time": 1 }]
+				},
+				"light_back": { "rgba": [{ "time": 1, "color": "ffffff00" }], "attachment": [{ "time": 1 }] },
+				"placeholderText": {
+					"rgba": [
+						{ "color": "ffffff00", "curve": "stepped" },
+						{ "time": 1, "color": "ffffff00" }
+					]
+				}
+			},
+			"bones": {
+				"jackpot_coin_coin_position": {
+					"rotate": [{ "curve": "stepped" }, { "time": 1 }],
+					"scale": [
+						{},
+						{
+							"time": 0.1,
+							"x": 0.996,
+							"y": 0.996,
+							"curve": [0.111, 0.996, 0.135, 0.862, 0.111, 0.996, 0.135, 0.996]
+						},
+						{
+							"time": 0.1667,
+							"x": 0.927,
+							"y": 0.996,
+							"curve": [0.177, 0.949, 0.188, 1.075, 0.177, 0.996, 0.188, 0.996]
+						},
+						{
+							"time": 0.2,
+							"x": 1.075,
+							"y": 0.996,
+							"curve": [0.268, 1.075, 0.352, 0.998, 0.268, 0.997, 0.352, 0.998]
+						},
+						{ "time": 0.4, "curve": "stepped" },
+						{ "time": 0.4333 },
+						{
+							"time": 0.5667,
+							"x": 0.936,
+							"y": 0.936,
+							"curve": [0.608, 0.936, 0.692, 0.996, 0.608, 0.936, 0.692, 0.996]
+						},
+						{
+							"time": 0.7333,
+							"x": 0.996,
+							"y": 0.996,
+							"curve": [0.818, 0.996, 0.915, 1, 0.818, 0.996, 0.915, 1]
+						},
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_popup_jackpot_coin1": {
+					"translate": [
+						{ "curve": [0.031, 0, 0.087, -18.35, 0.031, 0, 0.087, 0] },
+						{ "time": 0.1333, "x": -6.53, "curve": [0.166, 1.69, 0.212, 40.03, 0.166, 0, 0.212, 0] },
+						{ "time": 0.2333, "x": 44.49, "curve": [0.471, 93, 0.744, -35.66, 0.365, 0, 0.744, 0] },
+						{ "time": 1, "x": -35.66 }
+					],
+					"scale": [{ "curve": "stepped" }, { "time": 1 }]
+				},
+				"jackpot_coin_coin_top_text": {
+					"translate": [
+						{ "x": -21.68, "curve": "stepped" },
+						{ "time": 0.2333, "x": 9.5, "curve": [0.25, -11.69, 0.312, 0, 0.25, 0, 0.312, 0] },
+						{ "time": 0.3333 },
+						{ "time": 0.5667, "x": 0.51, "y": 1.03, "curve": "stepped" },
+						{ "time": 1, "x": 0.51, "y": 1.03 }
+					],
+					"scale": [
+						{ "curve": "stepped" },
+						{ "time": 0.3333, "curve": [0.361, 1, 0.406, 1.2, 0.361, 1, 0.406, 1.2] },
+						{
+							"time": 0.4333,
+							"x": 1.2,
+							"y": 1.2,
+							"curve": [0.454, 1.2, 0.513, 0.96, 0.454, 1.2, 0.513, 0.96]
+						},
+						{ "time": 0.5333, "x": 0.96, "y": 0.96, "curve": [0.57, 0.96, 0.63, 1, 0.57, 0.96, 0.63, 1] },
+						{ "time": 0.6667, "curve": "stepped" },
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_light_back1": {
+					"rotate": [{ "curve": "stepped" }, { "time": 0.3, "curve": "stepped" }, { "time": 1 }],
+					"scale": [
+						{ "curve": [0.03, 1, 0.07, 1.026, 0.03, 1, 0.07, 1.026] },
+						{
+							"time": 0.1,
+							"x": 1.026,
+							"y": 1.026,
+							"curve": [0.171, 1.026, 0.229, 1, 0.171, 1.026, 0.229, 1]
+						},
+						{ "time": 0.3, "curve": [0.371, 1, 0.444, 1.026, 0.371, 1, 0.444, 1.026] },
+						{
+							"time": 0.5,
+							"x": 1.026,
+							"y": 1.026,
+							"curve": [0.556, 1.026, 0.611, 1, 0.556, 1.026, 0.611, 1]
+						},
+						{ "time": 0.6667, "curve": [0.722, 1, 0.778, 1.026, 0.722, 1, 0.778, 1.026] },
+						{
+							"time": 0.8333,
+							"x": 1.026,
+							"y": 1.026,
+							"curve": [0.889, 1.026, 0.944, 1, 0.889, 1.026, 0.944, 1]
+						},
+						{ "time": 1 }
+					]
+				},
+				"jackpot_coin_popup_jackpot_coin": { "scale": [{ "curve": "stepped" }, { "time": 1 }] },
+				"jackpot_coin_popup": {
+					"translate": [{ "curve": "stepped" }, { "time": 1 }],
+					"scale": [
+						{ "x": 1.5, "y": 1.5, "curve": "stepped" },
+						{ "time": 1, "x": 1.5, "y": 1.5 }
+					]
+				},
+				"jp_coin_spin_ctrl": {
+					"translate": [
+						{ "curve": [0.043, 0, 0.124, -120, 0.043, 0, 0.124, 0] },
+						{ "time": 0.1667, "x": -120 },
+						{ "time": 0.3333, "curve": "stepped" },
+						{ "time": 1 }
+					],
+					"scale": [
+						{ "x": -1 },
+						{ "time": 0.1667, "x": -0.15 },
+						{ "time": 0.3333, "curve": "stepped" },
+						{ "time": 1 }
+					]
+				},
+				"coin_side_center_blur": {
+					"translate": [{}, { "time": 0.2, "x": -2.37, "y": 0.85 }, { "time": 0.3333, "y": 0.85 }],
+					"scale": [
+						{ "x": 0.704, "y": 0.949, "curve": "stepped" },
+						{ "time": 0.1, "x": 0.704, "y": 0.949 },
+						{ "time": 0.1333, "x": 0.704, "y": 0.997 },
+						{ "time": 0.1667, "x": 0.91, "y": 0.997 },
+						{ "time": 0.3333, "x": 0.704, "y": 0.997 },
+						{ "time": 0.4, "x": 0.704, "y": 0.986 }
+					]
+				},
+				"jackpot_coin_particles_fx": {
+					"rotate": [{ "curve": "stepped" }, { "time": 1 }],
+					"translate": [{}],
+					"scale": [
+						{ "x": 0.624, "y": 0.624, "curve": "stepped" },
+						{ "time": 0.4667, "x": 0.352, "y": 0.352 },
+						{ "time": 0.7333, "x": 0.515, "y": 0.515, "curve": "stepped" },
+						{ "time": 0.8333, "x": 0.513, "y": 0.513 },
+						{ "time": 1, "x": 0.526, "y": 0.526 }
+					]
+				},
+				"jackpot_coin_particles_fx2": {
+					"rotate": [
+						{ "value": 120, "curve": "stepped" },
+						{ "time": 0.5667, "value": 120, "curve": "stepped" },
+						{ "time": 1, "value": 120 }
+					],
+					"scale": [
+						{ "x": 0.671, "y": 0.671, "curve": "stepped" },
+						{ "time": 0.5667, "x": 0.387, "y": 0.387 },
+						{ "time": 0.6333, "x": 0.503, "y": 0.503 },
+						{ "time": 1, "x": 0.671, "y": 0.671 }
+					]
+				},
+				"jackpot_coin_light_back2": {
+					"rotate": [
+						{ "value": 45, "curve": "stepped" },
+						{ "time": 0.3, "value": 45, "curve": "stepped" },
+						{ "time": 1, "value": 45 }
+					],
+					"scale": [
+						{ "x": 0.783, "y": 0.783, "curve": [0.053, 0.783, 0.18, 0.822, 0.053, 0.783, 0.18, 0.822] },
+						{
+							"time": 0.2333,
+							"x": 0.822,
+							"y": 0.822,
+							"curve": [0.304, 0.822, 0.378, 0.783, 0.304, 0.822, 0.378, 0.783]
+						},
+						{
+							"time": 0.4333,
+							"x": 0.783,
+							"y": 0.783,
+							"curve": [0.475, 0.783, 0.558, 0.822, 0.475, 0.783, 0.558, 0.822]
+						},
+						{
+							"time": 0.6,
+							"x": 0.822,
+							"y": 0.822,
+							"curve": [0.656, 0.822, 0.711, 0.783, 0.656, 0.822, 0.711, 0.783]
+						},
+						{ "time": 0.7667, "x": 0.783, "y": 0.783 }
+					]
+				},
+				"coin": { "rotate": [{ "time": 1 }], "translate": [{ "time": 1 }], "scale": [{ "time": 1 }] },
+				"jackpot_coin_coin_blick_fx": { "translate": [{ "x": -3.23 }], "scale": [{ "x": 0.937, "y": 0.937 }] },
+				"coin3": { "translate": [{ "time": 1 }] },
+				"jackpot_coin_fire_wave_fx": {
+					"scale": [
+						{ "x": 0.57, "y": 0.57, "curve": "stepped" },
+						{ "time": 1, "x": 0.57, "y": 0.57 }
+					]
+				},
+				"coin_fire/coin_shine_o_00": {
+					"scale": [{}, { "time": 0.3667, "x": 0.953, "y": 0.953 }, { "time": 0.8333 }]
+				},
+				"jackpot_coin_ctrl": {
+					"scale": [{ "curve": "stepped" }, { "time": 0.3333, "curve": "stepped" }, { "time": 1 }]
+				},
+				"coin_blick_fx1": { "rotate": [{ "time": 1 }], "scale": [{ "x": 0.98, "y": 0.98 }] }
+			},
+			"drawOrder": [
+				{
+					"offsets": [
+						{ "slot": "coin3", "offset": 16 },
+						{ "slot": "jp_coin_down", "offset": 4 },
+						{ "slot": "jp_coin_down2", "offset": 4 },
+						{ "slot": "jp_coin_top", "offset": -5 }
+					]
+				},
+				{
+					"time": 0.0333,
+					"offsets": [
+						{ "slot": "jp_coin_down", "offset": 5 },
+						{ "slot": "jp_coin_down2", "offset": 5 },
+						{ "slot": "jp_coin_top", "offset": -3 },
+						{ "slot": "jp_coin_top2", "offset": -5 }
+					]
+				},
+				{ "time": 0.2333, "offsets": [{ "slot": "jp_coin_top", "offset": 1 }] },
+				{ "time": 0.8 }
+			]
+		}
+	}
+}

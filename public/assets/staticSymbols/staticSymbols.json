@@ -1,0 +1,145 @@
+{
+	"frames": {
+		"staticBlank": {
+			"frame": { "x": 365, "y": 704, "w": 115, "h": 106 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 49, "y": 65, "w": 115, "h": 106 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticC": {
+			"frame": { "x": 1, "y": 634, "w": 190, "h": 194 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 20, "w": 190, "h": 194 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticH1": {
+			"frame": { "x": 1, "y": 428, "w": 190, "h": 204 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 13, "w": 190, "h": 204 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticH2": {
+			"frame": { "x": 1, "y": 220, "w": 190, "h": 206 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 11, "w": 190, "h": 206 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticJ1": {
+			"frame": { "x": 1, "y": 826, "w": 190, "h": 194 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 20, "w": 190, "h": 194 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticJ2": {
+			"frame": { "x": 193, "y": 1, "w": 190, "h": 194 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 20, "w": 190, "h": 194 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticJ3": {
+			"frame": { "x": 193, "y": 197, "w": 190, "h": 194 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 20, "w": 190, "h": 194 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticL1": {
+			"frame": { "x": 324, "y": 885, "w": 113, "h": 118 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 51, "y": 65, "w": 113, "h": 118 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticL2": {
+			"frame": { "x": 385, "y": 1, "w": 104, "h": 113 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 55, "y": 65, "w": 104, "h": 113 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticL3": {
+			"frame": { "x": 197, "y": 885, "w": 119, "h": 125 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 48, "y": 63, "w": 119, "h": 125 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticL4": {
+			"frame": { "x": 385, "y": 229, "w": 107, "h": 107 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 55, "y": 71, "w": 107, "h": 107 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticL5": {
+			"frame": { "x": 385, "y": 116, "w": 107, "h": 111 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 54, "y": 70, "w": 107, "h": 111 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticM": {
+			"frame": { "x": 193, "y": 393, "w": 187, "h": 177 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 13, "y": 28, "w": 187, "h": 177 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticM1": {
+			"frame": { "x": 324, "y": 572, "w": 149, "h": 130 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 33, "y": 52, "w": 149, "h": 130 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticM2": {
+			"frame": { "x": 197, "y": 572, "w": 125, "h": 167 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 46, "y": 33, "w": 125, "h": 167 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticM3": {
+			"frame": { "x": 382, "y": 393, "w": 107, "h": 166 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 55, "y": 34, "w": 107, "h": 166 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticM4": {
+			"frame": { "x": 197, "y": 741, "w": 142, "h": 166 },
+			"rotated": true,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 36, "y": 34, "w": 142, "h": 166 },
+			"sourceSize": { "w": 214, "h": 232 }
+		},
+		"staticW": {
+			"frame": { "x": 1, "y": 1, "w": 190, "h": 217 },
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": { "x": 12, "y": 0, "w": 190, "h": 217 },
+			"sourceSize": { "w": 214, "h": 232 }
+		}
+	},
+	"animations": {
+		"staticH": ["staticH1", "staticH2"],
+		"staticJ": ["staticJ1", "staticJ2", "staticJ3"],
+		"staticL": ["staticL1", "staticL2", "staticL3", "staticL4", "staticL5"],
+		"staticM": ["staticM1", "staticM2", "staticM3", "staticM4"]
+	},
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.1",
+		"image": "staticSymbols.webp",
+		"format": "RGBA8888",
+		"size": { "w": 493, "h": 1017 },
+		"scale": "1",
+		"smartupdate": "$TexturePacker:SmartUpdate:1c8f5ff6e322c7bcf41ef8a7655cbe9f:b2257f891abe891aef77bd7a5a41ed42:3b11b3a8b69a655b0a5998f6ca478e54$"
+	}
+}

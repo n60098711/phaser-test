@@ -1,0 +1,16 @@
+L4.webp
+size:187,158
+filter:Linear,Linear
+star_particle
+bounds:1,1,53,50
+offsets:3,1,58,58
+sym_royal_04_frame
+bounds:107,72,85,79
+offsets:66,78,214,232
+rotate:90
+sym_royal_04_gem
+bounds:107,6,72,65
+offsets:73,86,214,232
+sym_royal_04_shadow
+bounds:1,52,105,105
+offsets:56,55,214,232

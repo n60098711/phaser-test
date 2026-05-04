@@ -1,0 +1,17 @@
+L3.webp
+size:299,138
+filter:Linear,Linear
+star_particle
+bounds:217,1,53,50
+offsets:3,1,58,58
+sym_royal_03_frame
+bounds:119,38,99,97
+offsets:58,67,214,232
+rotate:90
+sym_royal_03_gem
+bounds:217,52,85,81
+offsets:65,76,214,232
+rotate:90
+sym_royal_03_shadow
+bounds:1,14,117,123
+offsets:49,45,214,232
