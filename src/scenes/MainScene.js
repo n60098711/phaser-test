@@ -37,6 +37,8 @@ const PRE_SPIN_LIFT_MS = 220;
 const FINAL_LAND_BOUNCE_MS = 120;
 const FINAL_LAND_SCALE_BUMP = 1.04;
 const FINAL_LAND_COMPLETE_DELAY_MS = FINAL_LAND_BOUNCE_MS * 2 + 20;
+const FINAL_LAND_JUMP_UP_PX = 90;
+const FINAL_LAND_FALL_DOWN_MS = 260;
 
 const DEPTH_BG = 0;
 const DEPTH_GRID = 1;
@@ -302,14 +304,22 @@ export class MainScene extends Scene {
             const sp = incoming[i];
             sp.y += REEL_SPEED;
             if (sp.y >= sp.targetY) {
-                sp.y = sp.targetY;
+                sp.y = sp.targetY - FINAL_LAND_JUMP_UP_PX;
                 this.symbolsGrid[sp.targetRow][col] = sp;
                 this.tweens.add({
                     targets: sp,
-                    scale: SYMBOL_SCALE * FINAL_LAND_SCALE_BUMP,
-                    duration: FINAL_LAND_BOUNCE_MS,
-                    yoyo: true,
-                    ease: "Sine.easeInOut"
+                    y: sp.targetY,
+                    duration: FINAL_LAND_FALL_DOWN_MS,
+                    ease: "Cubic.easeIn",
+                    onComplete: () => {
+                        this.tweens.add({
+                            targets: sp,
+                            scale: SYMBOL_SCALE * FINAL_LAND_SCALE_BUMP,
+                            duration: FINAL_LAND_BOUNCE_MS,
+                            yoyo: true,
+                            ease: "Sine.easeInOut"
+                        });
+                    }
                 });
                 incoming.splice(i, 1);
             }
